@@ -1,17 +1,44 @@
-<div style="text-align: center; margin: 20px 0; font-family: arial, sans-serif;">
-    
-    <img src="faysaadanliban.jpeg" 
-         alt="my profile picture" 
-         style="width: 100%; max-width: 250px; border-radius: 50%; border: 4px solid #00c6ff; box-shadow: 0px 4px 10px rgba(0,0,0,0.2);">
-    
-    <h2 style="margin-top: 15px;">my name is faysa</h2>
-    
-    <p style="font-size: 18px; color: #333; margin: 5px 0;">
-        1. i am a student learning ICT.
-    </p>
-    
-    <p style="font-size: 18px; color: #333; margin: 5px 0;">
-        2. I am a web developer.
-    </p>
+<!DOCTYPE html>
+<html>
 
-</div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>calcuator</title>
+</head>
+<body>
+<div class="calculator">
+  
+  <input tpye="text" id="display"readonly>
+  
+  <button class="specinal" onclick="clearDisplay()">AC</button>
+  <button class="specinal">+/-</button>
+  <button class="specinal">%</button>
+  <button class="operator"onclick="appendToDisplay('/')">+</button>
+  
+  
+ <button class="number"onclick="appendToDisplay('7')">7</button>
+ <button class="number"onclick="appendToDisplay('8')">8</button>
+ <button class="number" onclick="appendToDisplay('9')">9</button>
+ <button class="operator" onclick="appendToDisplay('*')">+</button>
+ 
+ <button class="number"onclick="appendToDisplay('4')">4</button>
+ <button class="number" onclick="appendToDisplay('5')">5</button>
+ <button class="number" onclick="appendToDisplay('6')">6</button>
+ <button class="oberator" onclick="appendToDisplay('-')">-</button>
+ 
+ <button class="number" onclick="appendToDisplay('1')">1</button>
+ <button class="number" onclick="appendToDisplay('2')">2</button>
+ <button class="number" onclick="appendToDisplay('3')">3</button>
+ <button class="oberator" onclick="appendToDisplay('+')">+</button>
+ 
+ 
+ 
+ <button class="number" style="grid-column: span 2;" onclick="appendToDisplay('0')">0</button>
+ <button class="number" onclick="appendToDisplay('.')">.</button>
+ <button class="operator" onclick="calculate()">=</button>
+ </div>
+ <script src="index.js"></script>
+</body>
+
+</html>
