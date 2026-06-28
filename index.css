@@ -1,22 +1,29 @@
 .calculator {
   display:grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap:10px;
-  max-width:300px;
-  margin: 20px auto;
+  grid-template-columns: repeat(4,1fr);
+  Gap: 10px;
+  max-width: 320px;
+  margin:  50px auto;
   padding: 20px;
-  background-color:#222;
-  border-radius: 20px;
+  background-color: #1c1c1c;
+  border-radius: 30px;
   
 }
-
 button {
   padding: 20px;
-  font-size:18px;
+  font-size: 24px;
   border:none;
   border-radius: 50%;
   cursor: pointer;
+  aspect-ratio: 1 / 1;
 }
-.number { background-color:#333;color:white;}
-.operator {background-color: #f39c12;color:white;}
-.special {background-color: #a6a6a6; color:black;}
+.number[style*=" span 2"]{
+  aspect-ratio: auto;
+  border-radius: 50px;
+  text-align:left;
+  padding-left:30px;
+  
+}
+.number {background-color:#333333;color: white;}
+.operator {background-color:#f39c12; color:white;}
+.special {background-color: #a5a5a5; color: black;}
