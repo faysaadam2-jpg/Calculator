@@ -1,15 +1,13 @@
-const display = document.getElementById("display");
-function appendToDisplay(input) {
-  display.value +=input;
+function addtask(){
+  let input = document.getElementByid("todoinput");
+  let tasktext =input.value;
+  if (tasktext==="") {
+    alert("my name amal adna");return;
+  }
+  let li =document.createElement("li");
+  li.textContent=tasktext;
+  document.getElementById("tasklist").appendchild(li);
+  input.value="";
 }
-function clearDisplay() { 
-  display.value ="";
-}
-function calculate(){
-      try{
-   display.value =eval(display.value);
-   } catch(error) {
-      display.value ="error";
-   }
-   }
-   
+  
+  

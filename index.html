@@ -4,42 +4,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>calcuator</title>
-  <link rel="stylesheet" href="index.css"
+  <title>app todo list</title>
+  <link rel="stylesheet" href="index.css">
+  <style>
+    body {font-family: 'segoe ui', sans-serif; background-color: #f8f9fa; display:flex;justify-content:center;padding:40px;}
+    .container {background:white;padding:30px;border-radius:12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); width:100%; max- width:450px;}
+    h2 { color: #333; text-align:center;}
+    input {padding: 12px; border:1px solid #ddd; border-radius: 8px width:70;}
+    button { padding:12px 20px; background: #0078d4; color:white; border-radius:8px; border:none; cursor: pointer;}
+    ul { list-style:none; padding: 0;margin-top: 20px;}
+    li {background: #fff;border-bottom:1px solid #eee; padding: 15px;display: flex; justify-content: space-between; align-items:center;}
+    .delete-btn {background: #ff4d4d;color:white; border: none; padding: 5px 10px border-radius: 4px; cursor:pointer;}
+  </style>
 </head>
 <body>
-<div class="calculator">
-  
-  <input type="text" id="display"readonly>
-  
-  <button class="special" onclick="clearDisplay()">AC</button>
-  <button class="special">+/-</button>
-  <button class="special">%</button>
-  <button class="operator"onclick="appendToDisplay('/')">+</button>
-  
-  
- <button class="number"onclick="appendToDisplay('7')">7</button>
- <button class="number"onclick="appendToDisplay('8')">8</button>
- <button class="number" onclick="appendToDisplay('9')">9</button>
- <button class="operator" onclick="appendToDisplay('*')">*</button>
- 
- <button class="number"onclick="appendToDisplay('4')">4</button>
- <button class="number" onclick="appendToDisplay('5')">5</button>
- <button class="number" onclick="appendToDisplay('6')">6</button>
- <button class="operator" onclick="appendToDisplay('-')">-</button>
- 
- <button class="number" onclick="appendToDisplay('1')">1</button>
- <button class="number" onclick="appendToDisplay('2')">2</button>
- <button class="number" onclick="appendToDisplay('3')">3</button>
- <button class="operator" onclick="appendToDisplay('+')">+</button>
- 
- 
- 
- <button class="number" style="grid-column: span 2;" onclick="appendToDisplay('0')">0</button>
- <button class="number" onclick="appendToDisplay('.')">.</button>
- <button class="operator" onclick="calculate()">=</button>
- </div>
- <script src="index.js"></script>
-</body>
-
-</html>
+  <div class="container">
+    <h1>to do List app</h1>
+    <input type="text" id="todoinput" placeholder="information">
+    <button onclick="addtask()">click</button>
+    <ul id="tasklist"></ul>
+  </div>
+  <script src="index.js"></script>
