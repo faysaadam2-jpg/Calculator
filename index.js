@@ -1,13 +1,9 @@
-function addtask(){
-  let input = document.getElementByid("todoinput");
-  let tasktext =input.value;
-  if (tasktext==="") {
-    alert("my name amal adna");return;
-  }
-  let li =document.createElement("li");
-  li.textContent=tasktext;
-  document.getElementById("tasklist").appendchild(li);
-  input.value="";
+let display = document.getElementById('display');
+
+function appendValue(val) { display.value += val; }
+function clearDisplay() { display.value = ''; }
+function calculate() { 
+    try { display.value = eval(display.value); } 
+    catch { display.value = 'Error'; } 
 }
-  
-  
+

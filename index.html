@@ -6,22 +6,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>app todo list</title>
   <link rel="stylesheet" href="index.css">
-  <style>
-    body {font-family: 'segoe ui', sans-serif; background-color: #f8f9fa; display:flex;justify-content:center;padding:40px;}
-    .container {background:white;padding:30px;border-radius:12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); width:100%; max- width:450px;}
-    h2 { color: #333; text-align:center;}
-    input {padding: 12px; border:1px solid #ddd; border-radius: 8px width:70;}
-    button { padding:12px 20px; background: #0078d4; color:white; border-radius:8px; border:none; cursor: pointer;}
-    ul { list-style:none; padding: 0;margin-top: 20px;}
-    li {background: #fff;border-bottom:1px solid #eee; padding: 15px;display: flex; justify-content: space-between; align-items:center;}
-    .delete-btn {background: #ff4d4d;color:white; border: none; padding: 5px 10px border-radius: 4px; cursor:pointer;}
-  </style>
-</head>
-<body>
-  <div class="container">
-    <h1>to do List app</h1>
-    <input type="text" id="todoinput" placeholder="information">
-    <button onclick="addtask()">click</button>
-    <ul id="tasklist"></ul>
-  </div>
-  <script src="index.js"></script>
+  
+<div class="calculator">
+    <input type="text" id="display" disabled>
+    <div class="buttons">
+        <button onclick="clearDisplay()">AC</button>
+        <button onclick="appendValue('+/-')">+/-</button>
+        <button onclick="appendValue('%')">%</button>
+        <button class="operator" onclick="appendValue('/')">÷</button>
+        <button onclick="appendValue('7')">7</button>
+        <button onclick="appendValue('8')">8</button>
+        <button onclick="appendValue('9')">9</button>
+        <button class="operator" onclick="appendValue('*')">×</button>
+        <button onclick="appendValue('4')">4</button>
+        <button onclick="appendValue('5')">5</button>
+        <button onclick="appendValue('6')">6</button>
+        <button class="operator" onclick="appendValue('-')">-</button>
+        <button onclick="appendValue('1')">1</button>
+        <button onclick="appendValue('2')">2</button>
+        <button onclick="appendValue('3')">3</button>
+        <button class="operator" onclick="appendValue('+')">+</button>
+        <button class="zero" onclick="appendValue('0')">0</button>
+        <button onclick="appendValue('.')">.</button>
+        <button class="operator" onclick="calculate()">=</button>
+    </div>
+</div>
